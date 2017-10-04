@@ -1,0 +1,38 @@
+
+Virtualisierung hat seinen Ursprung schon in den Frühen 1960er Jahren, als die Computer systeme noch gross und teuer zu warten waren. Der Ursprung findet sich bei den Maneframes, eine platform, welche auch heute noch in gebrauch ist, obschon sie totgeglaubt wurde. IBM entwickelte die Virtualissierung, damit die users die Computer resourcen untereinander teilen konnten, und diese Trozdem noch parallel gebraucht werden konnten. Heutzutage erfreut sich die Virtualisierung eines enormen Hypes, welcher zu vielen verschiedenen Softwarelösungen geführt hat.
+
+Die Virtualisierung ermöglicht das ausführen mehreren Virtuellen machinen, welche auf einem einzigen host laufen. Diese Arbeit soll nun einen Vergleich zweier moderner Virtualisierungslösungen aufzeigen. KVM on Z ist die Erste lösung, auf welche eingegangen werden wird. Es ist eine Opensource lösung, welche in den Linux Kernel integriert wurde. 
+ESXi, die 2. Lösung, ist eine Weitere möglichkeit um zu Virtualisieren. Diese Lösung wird von VMWare vertrieben und ist nicht ganz so Quelloffen wie seine zu gegenüberstellende lösung.
+
+
+
+<INTEGRIERE TEXT FROM WORK>
+
+
+
+
+++Abstract aufgabenstellung Vergleich
+Ein vergleich im eigentlichen sinne stellt sich hier als enorm Schwierig dar. Da Zwei unterschiedliche einsatzgebiete miteinander verglichen werden sollen. Die Systeme, welche verglichen werden sollen, werden gemäs der Aufgabenstellung nicht einmal auf der Selben hardware verglichen sondern auf 2 für verschiedene Anwendungen gedachte lösungen. Der Auftrag an sich ist als ob ich eine Luxuskreuzfahrtschiff mit einem Transportschiff verglichen werden soll. So gibt es schon gemeinsamkeiten, jedoch kann kein wahrer, endgültiger und absoluter vergleich aufgestellt werden. Es kann auch kein wahrer gewinner aufgezeigt werden, da beide Lösungen in sich gut sind. Es soll mehr für den jeweiligen einsatzzweck sowie den gewünschten Funktionen einen individuellen entscheid getroffen werden. Ich möchte hiermit trozdem darlegen, welches die ungefähren unterschiede der beiden lösungen darstellt, damit eine Entscheidungsfindung unter umsten vereinfacht werden kann.
+
+
+
+++
+Wie man den vorangegangenen Kapitel nun entnehmne kann, sind beide Lösungsansätze eine gute wahl.
+
+
+
+
+
+
+
+KVM:
+Die Kernel-based Virtual Machine ist eine Virtualisierungslösung welche in den Linuxkernel integriert wurde. 
+
+Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernel zur Virtualisirung 
+
+
+https://www.cs.hs-rm.de/~linn/fachsem0910/hirt/KVM.pdf
+https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909,4
+https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909,5
+
+

@@ -1,0 +1,49 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{website:hs-rm}{online}{}
+      \name{author}{1}{}{%
+        {{hash=78c7445b12e5190328da62d96573c9d1}{%
+           family={Hirt},
+           familyi={H\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{78c7445b12e5190328da62d96573c9d1}
+      \strng{fullhash}{78c7445b12e5190328da62d96573c9d1}
+      \strng{authornamehash}{78c7445b12e5190328da62d96573c9d1}
+      \strng{authorfullhash}{78c7445b12e5190328da62d96573c9d1}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{KVM - The kernel-based virtual machine}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{url}
+      \verb https://www.cs.hs-rm.de/~linn/fachsem0910/hirt/KVM.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
