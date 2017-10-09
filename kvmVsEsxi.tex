@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{biblatex}
 \addbibresource{kvmVsEsxi.bib}
+\usepackage{tabularx}
 
 \author{Dane Wicki}
 \title{KVM on Z vs. ESXi}
@@ -78,89 +79,144 @@ Durch die simplen tools virt-manager sowie virsh ist schon eine Remote-Managemen
 Es gibt zudem für auf KVM aufbauende Komplettlösungen für die Servervirtualisierung. allen voran RHEV (Red Hat Virtualization).
  
 Für die Verwaltung der Gastsysteme gibt im Wesentlichen viele verschiedene Tools, von einfachen verwaltungssoftware für den Desktop PC wie zum Beispiel Gnome-Boxe
-\subsection{KVM on System Z}
-\begin{tabular}{ | l | c | r | } \hline
-	Test1 & Test2 & Test3 \\ \hline
-	TestA & TestB & TestB \\ \hline
+\subsection{KVM on IBM z System}
+KVM for IBM z Systems offers enterprises a cost-effective alternative to other hypervisors. It 
+has simple and familiar standard user interfaces
+, offering easy integration of the z Systems 
+platform into any IT infrastructure. 
+KVM for IBM z Systems can be managed to allow for over-commitment of system resources 
+to optimize the virtualized environment, as described in 2.2.1, “Compute consideration” on 
+page 16. 
+In addition, KVM for IBM z Systems can help make
+ platform mobility easier. Its live relocation 
+capabilities enable you to move VMs and work
+loads between multiple instances of KVM for 
+IBM z Systems without incurring downtime.
+\begin{table}[]
+\centering
+\begin{tabular}{|p{5cm}|p{10cm}|}
+\hline
+\textbf{Feature}                                     & \textbf{Benefits}                                                                       \\ \hline
+KVM hypervisor                                       & Supports running multiple disparate Linux VMs on a single system                        \\ \hline
+CPU sharing                                          & Allows for the sharing of CPU resources by VMs                                          \\ \hline
+I/O sharing                                          & Enables the sharing of I/O resources among VMs                                          \\ \hline
+Memory and CPU over-commitment                       & Supports the over-commitment of CPU, memory, and swapping of inactive memory            \\ \hline
+Live VM relocation                                   & Enables workload migration with minimal impact                                          \\ \hline
+Dynamic addition and deletion of virtual I/O devices & Reduces downtime to modify I/O device configurations for VMs                            \\ \hline
+Thin-provisioned VMs                                 & Allows for copy-on-write virtual disks to save on storage                               \\ \hline
+Hypervisor performance management                    & Supports policy-based, goal-oriented management and monitoring of virtual CPU resources \\ \hline
+Installation and configuration tools                 & Supplies tools to install and configure KVM for IBM z Systems                           \\ \hline
+Transactional execution use                          & Provides improved performance for running multi-threaded applications                   \\ \hline
 \end{tabular}
+\end{table}
 http://www.redbooks.ibm.com/redbooks/pdfs/sg248332.pdf
 
 
+\subsubsection{Managementtools für KVM on IBM z System}
+Dynamic Partition Manager (DPM)
+DPM is a guided management interface in the HMC that can be used to define the 
+z Systems hardware and virtual infrastructure, including integrated dynamic I/O 
+management that runs a KVM for IBM z Systems environment.\\ 
+Unattended installation
+Unattended installation of the KVM hypervisor simplifies administration. This task is 
+accomplished by creating a kickstart file, and by adding the 
+inst.auto=path\_to\_kickstart
+parameter to the 
+generic.prm
+ file.\\
 
+Single hypervisor management GUI
+Kimchi is an open source management tool that provides an intuitive graphical user 
+interface (GUI) for the following host configuration management tasks:
+–   Networking configuration for OSA-based NICs
+–   Storage configuration for ECKD and SCSI devices
+–   System basic information and statistics
+–   Debug reports
+–   Hypervisor shutdown/restart
+\\
+Enhanced problem determination support
+Several tools were added to support problem determination:
+–   The ziorep suite of tools for SCSI performance monitoring
+–   The DASD dump tool for dumps on a single DASD device
+–   The kdump feature creates crash dumps if there is a kernel crash
+–   The dbginfo script collects various system-related files for debugging purposes
+–   The sosreport script gathers system troubleshooting information
 
 \section{ESXi}
+VMware ESXi (formerly ESX) is an enterprise-class, type-1 hypervisor developed by VMware for deploying and serving virtual computers. As a type-1 hypervisor, ESXi is not a software application that one installs in an operating system (OS); instead, it includes and integrates vital OS components, such as a kernel.[2]
+
+After version 4.1 (released in 2010), VMware renamed ESX to ESXi. ESXi replaces Service Console (a rudimentary operating system) with a more closely integrated OS. ESX/ESXi is the primary component in the VMware Infrastructure software suite.[3]
+
+The name ESX originated as an abbreviation of Elastic Sky X.
+
 \subsection{Funktionsumfang}
+
+
 \chapter{Vergleich}
+Um dem Vergleich einen fairen touch zu verleiten wurde hier Ausschliesslich KVM und ESXi miteinander verglichen und nicht KVM on IBM z System, da dieses Komplettpacket wohl für zwei total unterschiedliche einsatztgebiete gebraucht werden und dementsprechend kein guter vergleich zustande kommen könnte.
+
+Es werden nur die Folgenden Punkte miteinander verglichen:
+\begin{itemize}
+	\item	Performance
+	\item	Integration
+	\item	Cost
+	\item	Complexity
+	\item	Maturity
+	\item	Scalability
+	\item	Functionality support
+\end{itemize}
+
+
+\subsubsection{Performance}
+
+Hypervisors may be classified into two types, which can impact their performance. Type 1 hypervisors, also known as “bare metal” hypervisors, run directly on the physical hardware, and the OS of each guest runs on top of the hypervisor. These hypervisors typically allow some guests to control the hypervisor. Most businesses use Type 1 hypervisors.
+
+A Type 2 hypervisor, also known as a hosted hypervisor, runs within an OS that runs on the physical hardware. The OS of each guest then runs on top of the hypervisor. Desktop hypervisors are usually Type 2 hypervisors.
+
+Xen is probably the best example of a pure Type 1 hypervisor, although ESXi is clearly a Type 1 hypervisor as well because it isn’t an application that’s installed onto an OS. ESXi includes a kernel and other OS components that it integrates into the native OS.
+
+The classification of KVM is more challenging because it shares characteristics of both types of hypervisor. It’s distributed as a Linux component, meaning that a Linux user can start KVM from a command line or graphical user interface (GUI). These methods of starting KVM make it appear as if the hypervisor is running on the host OS, even though KVM is actually running on the bare metal.
+
+The host OS provides KVM with a launch mechanism and establishes a co-processing relationship with it, allowing KVM to share control over physical hardware with the Linux kernel. KVM uses the processor’s virtualization instructions when it runs on x86 hardware, allowing the hypervisor and all of its guests to run directly on the bare metal. The physical hardware performs most of the resource translations, so KVM meets the traditional criteria for a Type 1 hypervisor.
+
+A Type 1 hypervisor should outperform a Type 2 hypervisor, all other factors being equal. Type 1 hypervisors avoid the overhead that a Type 2 hypervisor incurs when it requests access to physical resources from the host OS. However, other factors also play an important role in a hypervisor’s performance. For example, ESXi generally requires more time to create and start a server than KVM. ESXi also has slower performance when running servers, although this difference may be insignificant for typical loads.
+\subsubsection{Integration}
+Hypervisors use different methods to communicate with the host’s physical hardware. KVM uses an agent installed on the host to communicate with hardware, while ESXi uses VMware’s management plane to communicate with hardware. The process does provide the advantage of allowing ESXi to access other VMware products that use this management plane. However, it also requires ESXi to use VMware’s control stack, which can increase hardware requirements.
+
+Close integration with the host OS is the primary reason that Linux developers typically prefer KVM, which was incorporated into the Linux kernel shortly after its release in 2007. In comparison, Xen didn’t become officially part of the Linux kernel until 2011, eight years after its initial release. Linux developers are also more likely to use KVM because Red Hat and other Linux distributors have adopted it in preference to other hypervisors. Illumos is an open-source OS based on OpenSolaris that also chose KVM over other hypervisors when it added support for hardware virtualization.
+\subsubsection{Cost}
+
+KVM clearly wins over VMware on the basis of cost. KVM is open source, so it doesn’t incur any additional cost to the user. It’s also distributed in a variety of ways, often as part of an open-source OS.
+
+VMware charges a license fee to use its products, including ESXi. It’s able to do this because VMware was the first company to release enterprise-class virtualization software and is still the market leader in this segment. Its brand is therefore still relevant to an business’s end users, regardless of what developers may think about it. An ESXi user must also purchase a license to use vSphere, VMware’s suite of tools for cloud computing that uses ESXi. Additional software licenses may be needed, which will further increase the cost of implementing ESXi.
+
+IBM performed some calculations regarding the total cost of ownership (TCO) for KVM and VMware in 2012. These calculations showed the KVM’s TCO was typically 39 percent less than VMware, although the actual TCO will depend on site-specific factors such as the operational setting and workload. This difference in TCO indicates that cloud service providers will probably want to implement KVM on at least one cluster, regardless of the other factors to consider.
+\subsubsection{Complexity}
+
+A comparison of KVM and VMware also show a clear difference in the size of the code base, which affects a hypervisor’s maintenance costs. KVM was initially released to take advantage of processor extensions that allowed them to virtualize guests without translating binary code. This origin meant that the first stable release of KVM was essentially a lightweight virtualization driver, with little more than 10,000 lines of code (LOC).
+
+VMware is believed to have over 6 million LOC, although this fact can’t be verified since its source code isn’t publicly available. This total doesn’t directly affect performance since VMware uses hardware extensions to virtualize guest. Nevertheless, its original code has never been completely rewritten, resulting in a more complex code base than KVM.
+\subsubsection{Maturity}
+
+KVM and ESXi are both highly mature and stable. KVM has been part of the Linux kernel for over a decade, and ESXi has been publicly available since 2006. However, KVM is more widely deployed since it’s open source and is included in many packages such as Redhat Enterprise Virtualization (RHEV). KVM also supports more features than any other hypervisor.
+\subsubsection{Scalability}
+
+KVM is generally more scalable than VMware, primarily because vSphere has some limitations on the servers it can manage. Furthermore, VMware has added a large number of Storage Area Networks (SANs) to support various vendors. This feature means that VMware has more storage options than KVM, but it also complicates VMware’s storage support when scaling up.
+\subsubsection{Functionality Support}
+
+Hypervisors vary greatly in their support of functionality. Network and storage support are especially important and are probably more important than any other factor besides OS integration. It shouldn’t come as a surprise to learn that ESXi’s support for other VMware products is unmatched by any other hypervisor. On the other hand, KVM offers more options for network support than VMware.
+
+
 \chapter{Fazit}
+KVM is typically the most popular choice for users who are concerned about the cost of operating each VM and less interested in enterprise-level features. This rule primarily applies to providers of cloud and host services, who are particularly sensitive to the cost and density of their servers. These users are highly likely to choose open-source hypervisors, especially KVM.
+
+The tight integration with the host OS is one of the most common reasons for developers to choose KVM, especially those who use Linux. The inclusion of KVM in many Linux distributions also makes it a convenient choice for developers. KVM is also more popular among users who are unconcerned about brand names.
 \chapter{Anhang}
-
-
-
-
-\chapter{Wayne}
-Ein vergleich im eigentlichen sinne stellt sich hier als enorm Schwierig dar. Da Zwei unterschiedliche einsatzgebiete miteinander verglichen werden sollen. Die Systeme, welche verglichen werden sollen, werden gemäs der Aufgabenstellung nicht einmal auf der Selben hardware verglichen sondern auf 2 für verschiedene Anwendungen gedachte lösungen. Der Auftrag an sich ist als ob ich eine Luxuskreuzfahrtschiff mit einem Transportschiff verglichen werden soll. So gibt es schon gemeinsamkeiten, jedoch kann kein wahrer, endgültiger und absoluter vergleich aufgestellt werden. Es kann auch kein wahrer gewinner aufgezeigt werden, da beide Lösungen in sich gut sind. Es soll mehr für den jeweiligen einsatzzweck sowie den gewünschten Funktionen einen individuellen entscheid getroffen werden. Ich möchte hiermit trozdem darlegen, welches die ungefähren unterschiede der beiden lösungen darstellt, damit eine Entscheidungsfindung unter umsten vereinfacht werden kann.
-
-
-
-++
-Wie man den vorangegangenen Kapitel nun entnehmne kann, sind beide Lösungsansätze eine gute wahl.
-\footfullcite{website:hs-rm}
-
-
-\chapter{Was ist Virtualisierung}
-Unter der Virtualisiertung versteht man in der Informatik unter anderem die Technologie, bie welcher das Betriebssystem nicht unmittelbar auf einer Physischen Instanz wie einem Server, oder DesktopPCs installiert ist, sondern auf der Hardware über einer Zwischenschicht, welche die reale phyisische hardware abstrahiert, oder aber in einem Gastgeber-Betriebssystem mittels einer Viertualisierungssoftware wie VirtualBox.
-Dieses auf der virtuellen umgebung laufende Betriebssystem nennt man Gastsysteme.
-Die tatsächliche vorhandene Hardwareumgebung wird als Hostsystem bezeichnet. Die Softwareschicht, welche diese Gastsysteme verwaltet nennt man Hypervisor (Klassifikationen Siehe Kapitel XYZ).
-Dieser Hypervisor verwaltet die Ressourcen und dessen zuteilung für die einzelnen Gastsysteme. Dabei verteilt der Hypervisor die Resourcen so, dass alle resourcen für das Gastsystem verfügbar sind, wenn dieses es benötigt, so als ob nur jenes Gastsystem vorhanden wäre.
-Dem Gastsystem wird dank des Hypervisors eine eigener vollständiger Rechner vorgetäuscht, mit allen Hardwar-Elementen welche dazugehören. Das abstrahieren des Hypervisors und vortäuschen einer Realen hardware führt dazu, dass das Gastsystem nicht nur auf der Reellen hardware lauffähig ist in der es installiert wurde, sondern auf allen, in denen der Hypervisor installiert bzw. lauffähig ist.
-
-
-
-++Kurze geschichte zur Virtualisierung
-Die ersten Hypervisoren, die Virtualisierung ermgölichten, 
-
-
-
-Unter Virtualisierung versteht man unter anderem eine Technologie, bei der eine Betriebssysteminstanz nicht unmittelbar auf einem Physischen Rechner, z.B Server, installiert ist, sondern auf der Hardwere über einer Zwischensicht, die von der Hardware abstrahiert, oder aber in einem Gastgeber-Betriebssystem mittels Virtualisierungssoftware, z.B. VMWare oder Virtual Box.
-
-In der Informatik bezeichnet Virtualisierung das Nachbilden eines Hardware- Softwareobjektes, welches vom selben typ wie die tatsächliche darunterliegende Hardware/Software ist.
-Dieses Nachbilden geschieht mit hilfe eines Abstraktionslayers.
-
-
-
-
-\section{Grundlagen der Virtualisierung}
-
-
-Die Geschichte der Virtualisierung liegt schon eine lange Zeit zurück. Bereits in den frühen 1960er Jahre hat IBM 
-
-
-
-
-
-
-
-
-++Hypervisor klassifikationen.
-Ein Hypervisor lässt sich typischer weise in einen von 2 Typen unterteilen.
-+Typ1 Naitive or bare metal
-Native Hypervisoren sind softwaresysteme, welche direkt auf der Hardware des Hostsystemes laufen um die Hardware zu kontrollieren und die Gastsysteme zu überwachen. . 
-
-
-Diesens auf der abstrahierten, virtuellen umgebung laufende Betriebssystem nennt man Gastsystem.
-
-
-
-\chapter{KVM}
-Die Kernel-based Virtual Machine ist eine Virtualisierungslösung welche in den Linuxkernel integriert wurde. 
-
-Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernel zur Virtualisirung 
+\printbibliography
 
 
 https://www.cs.hs-rm.de/~linn/fachsem0910/hirt/KVM.pdf
 https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909,4
 https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909,5
-
-\printbibliography
+https://www.rippleweb.com/vmware-vs-kvm/
 \end{document}
-

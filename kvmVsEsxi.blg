@@ -1,15 +1,9 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'kvmVsEsxi.blg'
-[20] biber:303> INFO - === Wed Oct  4, 2017, 13:31:37
-[31] Biber.pm:359> INFO - Reading 'kvmVsEsxi.bcf'
-[77] Biber.pm:835> INFO - Found 1 citekeys in bib section 0
-[87] Biber.pm:3670> INFO - Processing section 0
-[98] Biber.pm:3840> INFO - Looking for bibtex format file 'kvmVsEsxi.bib' for section 0
-[98] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[102] bibtex.pm:1292> INFO - Found BibTeX data source 'kvmVsEsxi.bib'
-[112] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[113] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[113] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
-[113] Biber.pm:3505> INFO - No sort tailoring available for locale 'de-DE'
-[114] bbl.pm:608> INFO - Writing 'kvmVsEsxi.bbl' with encoding 'UTF-8'
-[115] bbl.pm:712> INFO - Output to kvmVsEsxi.bbl
+[37] biber-darwin:303> INFO - === Thu Oct  5, 2017, 23:33:40
+[58] Biber.pm:359> INFO - Reading 'kvmVsEsxi.bcf'
+[174] Biber.pm:835> INFO - Found 0 citekeys in bib section 0
+[181] Utils.pm:164> WARN - The file 'kvmVsEsxi.bcf' does not contain any citations!
+[187] bbl.pm:608> INFO - Writing 'kvmVsEsxi.bbl' with encoding 'UTF-8'
+[187] bbl.pm:712> INFO - Output to kvmVsEsxi.bbl
+[187] Biber.pm:109> INFO - WARNINGS: 1
