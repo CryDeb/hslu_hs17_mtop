@@ -89,61 +89,54 @@ KVM for IBM z System ermöglicht zudem das den einzelnen Gastsystemen mehr resou
 \centering
 \begin{tabular}{|p{5cm}|p{10cm}|}
 \hline
-\textbf{Feature}                                     & \textbf{Benefits}                                                                       \\ \hline
-KVM hypervisor                                       & Supports running multiple disparate Linux VMs on a single system                        \\ \hline
-CPU sharing                                          & Allows for the sharing of CPU resources by VMs                                          \\ \hline
-I/O sharing                                          & Enables the sharing of I/O resources among VMs                                          \\ \hline
-Memory and CPU over-commitment                       & Supports the over-commitment of CPU, memory, and swapping of inactive memory            \\ \hline
-Live VM relocation                                   & Enables workload migration with minimal impact                                          \\ \hline
-Dynamic addition and deletion of virtual I/O devices & Reduces downtime to modify I/O device configurations for VMs                            \\ \hline
-Thin-provisioned VMs                                 & Allows for copy-on-write virtual disks to save on storage                               \\ \hline
-Hypervisor performance management                    & Supports policy-based, goal-oriented management and monitoring of virtual CPU resources \\ \hline
-Installation and configuration tools                 & Supplies tools to install and configure KVM for IBM z Systems                           \\ \hline
-Transactional execution use                          & Provides improved performance for running multi-threaded applications                   \\ \hline
+\textbf{Feature}                                     & \textbf{Benefit}                                                                                      \\ \hline
+KVM hypervisor                                       & Unterstzt das ausführen mehrere nicht gleicher Linux VMs auf einem einzelnen System.                  \\ \hline
+CPU sharing                                          & Erlaubt es die resourcen der CPU über mehrere VMs hinweg zu teilen.                                   \\ \hline
+I/O sharing                                          & Ermöglicht das teilen von I/O resourcen zwischen den VMs.                                             \\ \hline
+Memory and CPU over-commitment                       & Erlaubt es einer VM mehr CPU, memory und swapping space zu zuteilen als effektiv vorhanden ist.       \\ \hline
+Live VM relocation                                   & Ermöglicht die Arbeitsbelastung zu migrieren mit minimalen Einfluss.                                  \\ \hline
+Dynamic addition and deletion of virtual I/O devices & Reduziert Downtime um die I/O geräte für die VMs zu konfigurieren.                                    \\ \hline
+Thin-provisioned VMs                                 & Die VMDisk benötigt nur den belegten speicherplatz, es wird so speicher gespart.                      \\ \hline
+Hypervisor performance management                    & Unterstützung von policy-based, goal-oriented management und monitoring der virtuellen CPU resourcen. \\ \hline
+Installation and configuration tools                 & Mitlieferung von tools um KVM for IBM z System zu installieren und Konfigurieren.                     \\ \hline
+Transactional execution use                          & Bietet verbeserte performance für das ausführen von multi-threaded Applikationen.                     \\ \hline
 \end{tabular}
 \end{table}
 http://www.redbooks.ibm.com/redbooks/pdfs/sg248332.pdf
 
 
 \subsubsection{Managementtools für KVM on IBM z System}
-Dynamic Partition Manager (DPM)
-DPM is a guided management interface in the HMC that can be used to define the 
-z Systems hardware and virtual infrastructure, including integrated dynamic I/O 
-management that runs a KVM for IBM z Systems environment.\\ 
-Unattended installation
-Unattended installation of the KVM hypervisor simplifies administration. This task is 
-accomplished by creating a kickstart file, and by adding the 
-inst.auto=path\_to\_kickstart
-parameter to the 
-generic.prm
- file.\\
+Dynami Partition Manager kurz DPM.
+DPM ist ein geführtes management Interface im HMC (IBM Hardware Management Console), mit welchem die z System hardware und die virtuelle Infrastruktur mitsamt dem integriertem dynamischen I/O management  definiert werden kann.\\
+Unattended installation (Unbeaufsichtigte Installation)
+Unattended Installation des KVM hypervisors vereinfacht die administrations. Dies wird erreicht, indem ein Kickstart file erstellt wird, sowie dem hinzufügen des inst.auto=path\_to\_kickstart  parameters im generic.prm file.
 
 Single hypervisor management GUI
-Kimchi is an open source management tool that provides an intuitive graphical user 
-interface (GUI) for the following host configuration management tasks:
-–   Networking configuration for OSA-based NICs
-–   Storage configuration for ECKD and SCSI devices
-–   System basic information and statistics
-–   Debug reports
-–   Hypervisor shutdown/restart
-\\
+Kimchi ist ein OpenSource management tool, welches über ein intuitives Graphisches User Interface (GUI) für die folgende Management aufgaben verfügt.
+\begin{itemize}
+    \item Netzwerk configuration für die OSA-based NICs
+    \item Storage Konfiguration für ECKD und SCSI geräte
+    \item Standart System informationen und Statistiken
+    \item Debug reports
+    \item Hypervisor Neustart
+\end{itemize}
 Enhanced problem determination support
-Several tools were added to support problem determination:
-–   The ziorep suite of tools for SCSI performance monitoring
-–   The DASD dump tool for dumps on a single DASD device
-–   The kdump feature creates crash dumps if there is a kernel crash
-–   The dbginfo script collects various system-related files for debugging purposes
-–   The sosreport script gathers system troubleshooting information
+Viele verschiedene tools wurden noch hinzugefügt um probleme zu finden:
+\begin{itemize}
+    \item Ziorep -> eine suite bestehend aus tools, welche die SCSI performence überwachen können.
+    \item Das DASD dump tool um einzelne DASD geräte entleeren zu können.
+    \item Das KDUMP feature, welches Crash Dumps erstellt, fals ein Kernel crash eintritt.
+    \item dbginfo script, welches verschiedene system-related files für Debug zwecke sammelt.
+    \item Das sosreport skript sammelt system felerbehebungs informationen
+\end{itemize}
 
 \section{ESXi}
-VMware ESXi (formerly ESX) is an enterprise-class, type-1 hypervisor developed by VMware for deploying and serving virtual computers. As a type-1 hypervisor, ESXi is not a software application that one installs in an operating system (OS); instead, it includes and integrates vital OS components, such as a kernel.[2]
+VMWare ESXi (früher bekannt als ESX) ist ein Enterprise-Class, Typ-1 Hypervisor. Entwickelt wird dieser Typ-1 Hypervisor von VMware. Als ein Typ-1 Hypervisor, ist ESXI nicht eine Software Application, welche auf einem bestehenden Betriebssystem installiert wird, sondern, es beherbergt in sich schon wesentliche komponente eines Betriebssystemes, wie etwa den kernel.
 
-After version 4.1 (released in 2010), VMware renamed ESX to ESXi. ESXi replaces Service Console (a rudimentary operating system) with a more closely integrated OS. ESX/ESXi is the primary component in the VMware Infrastructure software suite.[3]
-
-The name ESX originated as an abbreviation of Elastic Sky X.
+Nach der verion 4.1 benannte VMWare ESX zu ESXi, ESXi ersetzte damals die Service Console welches lediglich ein rudimentäres Betriebssystem war, mit einem besser integrierten Betriebssystem. ESX/ESXi ist die wichtigste Komponente der VMWare Software Infrastruktur.
 
 \subsection{Funktionsumfang}
-
+TODO
 
 \chapter{Vergleich}
 Um dem Vergleich einen fairen touch zu verleiten wurde hier Ausschliesslich KVM und ESXi miteinander verglichen und nicht KVM on IBM z System, da dieses Komplettpacket wohl für zwei total unterschiedliche einsatztgebiete gebraucht werden und dementsprechend kein guter vergleich zustande kommen könnte.

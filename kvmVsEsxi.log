@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.4)  5 OCT 2017 23:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.4)  10 OCT 2017 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,70 +912,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
 [7]
 
+LaTeX Warning: Citation '(' on page 8 undefined on input line 87.
+
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 95.
+               Default added (so using `tbp') on input line 88.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []|\OT1/cmr/m/n/14.4 Memory and CPU
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 109--109
+Underfull \hbox (badness 1571) in paragraph at lines 102--102
 []|\OT1/cmr/m/n/14.4 Transactional exe-cu-ti-
  []
 
 
-Overfull \hbox (21.99132pt too wide) in paragraph at lines 97--111
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]|\OT1/cmr/m/n/14.4 Bietet ver-be-ser-te per-for-man-ce f[]ur das
+ []
+
+
+Underfull \hbox (badness 6461) in paragraph at lines 102--102
+\OT1/cmr/m/n/14.4 ausf[]uhren von multi-threaded Ap-pli-ka-tio-
+ []
+
+
+Overfull \hbox (21.99132pt too wide) in paragraph at lines 90--104
  [][] 
  []
 
 
-Overfull \hbox (67.332pt too wide) in paragraph at lines 83--113
-\OT1/cmr/m/n/14.4 in-cur-ring dow-n-ti-me. http://www.redbooks.ibm.com/redbooks
-/pdfs/sg248332.pdf 
+Overfull \hbox (1.038pt too wide) in paragraph at lines 109--113
+\OT1/cmr/m/n/14.4 Unattended in-stal-la-ti-on (Un-be-auf-sich-tig-te In-stal-la
+-ti-on) Unat-ten-ded In-
  []
 
+[8] [9]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--127
-
- []
-
-[8] [9] [10] [11]
-Kapitel 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 160.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
- [12
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
 
-] [13]
-[14] [15] [16]
+Overfull \hbox (1.25128pt too wide) in paragraph at lines 123--125
+\OT1/cmr/m/n/14.4 Enhanced pro-blem de-ter-mi-na-ti-on sup-port Vie-le ver-schi
+e-de-ne tools wur-
+ []
+
+[10] [11]
+Kapitel 3.
+[12
+
+] [13] [14] [15] [16]
 Kapitel 4.
 [17
 
 ]
 Kapitel 5.
 
-LaTeX Warning: Empty bibliography on input line 215.
+LaTeX Warning: Empty bibliography on input line 201.
 
 
-Overfull \hbox (194.45052pt too wide) in paragraph at lines 218--222
+Overfull \hbox (194.45052pt too wide) in paragraph at lines 204--208
 \OT1/cmr/m/n/14.4 https://www.cs.hs-rm.de/ linn/fachsem0910/hirt/KVM.pdf https:
 //www.tecchannel.de/a/kostenlose-
  []
 
 
-Overfull \hbox (116.05472pt too wide) in paragraph at lines 218--222
+Overfull \hbox (116.05472pt too wide) in paragraph at lines 204--208
 \OT1/cmr/m/n/14.4 virtualisierungssoftware-im-vergleich,2051909,4 https://www.t
 ecchannel.de/a/kostenlose-
  []
 
 
-Overfull \hbox (92.79004pt too wide) in paragraph at lines 218--222
+Overfull \hbox (92.79004pt too wide) in paragraph at lines 204--208
 \OT1/cmr/m/n/14.4 virtualisierungssoftware-im-vergleich,2051909,5 https://www.r
 ippleweb.com/vmware-
  []
@@ -983,23 +997,31 @@ ippleweb.com/vmware-
 [18
 
 ] (./kvmVsEsxi.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                kvmVsEsxi
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'kvmVsEsxi.run.xml'.
 \openout1 = `kvmVsEsxi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8737 strings out of 492995
- 148392 string characters out of 6132704
- 588139 words of memory out of 5000000
- 12191 multiletter control sequences out of 15000+600000
+ 8911 strings out of 492995
+ 151766 string characters out of 6132704
+ 588147 words of memory out of 5000000
+ 12365 multiletter control sequences out of 15000+600000
  10010 words of font info for 36 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 35i,10n,30p,1134b,1533s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,11n,30p,1134b,1533s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on kvmVsEsxi.pdf (20 pages, 94975 bytes).
+Output written on kvmVsEsxi.pdf (20 pages, 96118 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
