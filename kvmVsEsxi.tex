@@ -213,12 +213,15 @@ KVM ist im Allgemeinen etwas besser Skalierbar als ESXi. Vorallem weil vSpehre, 
 
 \subsubsection{Functionality Support}
 
-Hypervisors vary greatly in their support of functionality. Network and storage support are especially important and are probably more important than any other factor besides OS integration. It shouldn’t come as a surprise to learn that ESXi’s support for other VMware products is unmatched by any other hypervisor. On the other hand, KVM offers more options for network support than VMware.
+Hypervisoren unterscheiden sich stark in ihrer Funktionalität. Netzwerk- und Speicherunterstützung sind besonders wichtig und sind wahrscheinlich wichtiger als viele weitere Funktionen ausser vielleicht die Integration in das Betriebssystem. Es sollte keine allzu grosse Überraschung sein, dass die ESXi-Unterstützung für andere VMware-Produkte von keinem anderen Hypervisor erreicht wird. Auf der anderen Seite bietet KVM mehr Möglichkeiten für die Netzwerkunterstützung als VMware.
 
 \chapter{Fazit}
-KVM is typically the most popular choice for users who are concerned about the cost of operating each VM and less interested in enterprise-level features. This rule primarily applies to providers of cloud and host services, who are particularly sensitive to the cost and density of their servers. These users are highly likely to choose open-source hypervisors, especially KVM.
+KVM ist in der Regel die beliebteste Wahl für Benutzer, die sich Sorgen über die Kosten für den Betrieb jeder einzelnen VM machen und weniger an Funktionen auf Unternehmensebene interessiert sind. Diese gilt in erster Linie für Anbieter von Cloud- und Host-Services, die besonders sensibel auf die Kosten und die Dichte ihrer Server reagieren. Weshalb die anbieter von Cloud- und Host-Services wohl eher eine Open-Source Hypervisor wählen, höchstwahrscheinlich KVM.
 
-The tight integration with the host OS is one of the most common reasons for developers to choose KVM, especially those who use Linux. The inclusion of KVM in many Linux distributions also makes it a convenient choice for developers. KVM is also more popular among users who are unconcerned about brand names.
+Die enge Integration mit dem Host-Betriebssystem ist einer der häufigsten Gründe für Entwickler, sich für KVM zu entscheiden, insbesondere für diejenigen, die Linux verwenden. Die Einbindung von KVM in viele Linux-Distributionen führt dazu, dass es die praktischere Wahl für Entwickler ist.
+
+Es gilt jedoch immer zu beachten, dass für die Entsprechende Umgebung und den gwünschten Funktionsumfang eine eigene Kurze Analyse gemacht werden muss um so siene den Umständen entsprächende Optimale wahl zu treffen.
+
 \chapter{Anhang}
 \printbibliography
 
