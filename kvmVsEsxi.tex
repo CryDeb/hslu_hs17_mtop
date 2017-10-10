@@ -63,11 +63,11 @@ Ein Typ-1-Hypervisor (Bare-Metal oder auch native genannt) setzt direkt auf der 
 	\end{center}
 \end{wrapfigure}
 Ein Typ-2-Hypervisor setzt auf einem vollwertigen Betriebssystem, welches auf dem Hostsystem installiert ist, auf und nutzt die Treiber, des Betriebssystems, um auf die Hardwareressourcen des Hostsystems zugreifen zu können. Dementsprechend sind alle Typ-2-Hypervisoren auf einem Hostsystem lauffähig, sofern sich auf diesem das unterstützte Host Betriebssystem installieren lässt.
-\section{KVM}
+\chapter{KVM}
 KVM steht für Kernel Based Virtual Machine. bei KVM handelt es sich um eine Infrastruktur des Linux-Kernels zur Virtualisierung. Die Virtualisierung auf verschiedenen Plattformen unterstützt, unter anderem die folgenden Intel, AMD, ARM, PowerPC und System Z. KVM selbst nimmt keine Emulation vor, es ist also nicht möglich eine Bestimmte Hardware zu emulieren mit KVM selbst. so würde es sich als enorm Schwer erweisen ein vollwertiges Betriebssystem auf dem Hostsystem nur mit Hilfe von KVM zu installieren. Um die Emulation zu ermöglichen hat sich QEMU als de facto Standard etabliert. QEMU steht für Quick Emulator uns stellt für virtualisierte Gastsysteme die notwendigen Geräte wie Festplatten, Netzwerk-, Sound- und Grafikkarten zur Verfügung.\\
 KVM ist desweiteren auch eine Quelloffene Lösung, und ist neben XEN der Weitverbreitete Quelloffene Hypervisor. Trotz einigen aussagen ist KVM jedoch ein Type 2 Hypervisor und nicht wie XEN ein Type 1.
 
-\subsection{Funktionsumfang}
+\section{Funktionsumfang}
 KVM ist bereits bei der Installation eine sehr schlanke und einfache Umgebung. 
 Es sind im Wesentlichen nur die KVM Kernel Module dem bestehenden System zu installieren sowie Qemu und Management-Tools einzurichten. Der Vorteil liegt hier auch, dass viele schon bestehende Linux-Server nachträglich zu einem Virtualisierungssystem aufgerüstet werden kann ohne damit eine Komplette Neuinstallation tätigen zu müssen.
 Weiter verhält sich jede  Virtuelle CPU (kurz VCPU) im Gastsystem wie ein gewöhnlicher Linux-Process und kann so beispielsweise auch über normale Kommandos wie kill oder top kontrolliert und gesteuert werden. Dasselbe gilt auch für die Gerätelandschaft. Da mit KVM und Qemu die normalen Linux-Treiber genutzt werden können, ist eine Umgewöhnung für einen Linux-Administrator nicht nötig.\\
@@ -82,7 +82,7 @@ Es gibt zudem für auf KVM aufbauende Komplettlösungen für die Servervirtualis
 Für die Verwaltung der Gastsysteme geben im Wesentlichen viele verschiedene Tools, von einfachen verwaltungssoftware für den Desktop PC wie zum Beispiel Gnome-Boxe
 
 \newpage
-\subsection{KVM on IBM z System}
+\section{KVM on IBM z System}
 KVM for IBM z Systems ist eine kostengünstige Alternative zu der von der IBM selbst entwickelten Virtualisierungslösung z/VM. KVM for IBM z System besitzt ein einfaches und gewohntes User-Interfaces, welche eine einfache Integration der z System Plattform in die IT Infrastruktur ermöglicht.
 KVM for IBM z System ermöglicht zudem das den einzelnen Gastsystemen mehr Ressourcen zugeteilt wird, als das z System tatsächlich zur Verfügung stellt, dieser Umstand ermöglicht die optimale Auslastung der virtuellen Umgebung. Zusätzlich macht es die Plattform Mobilität einfacher und ist sogar in der Lage VMs und workloads zwischen verschiedenen Instanzen von KVM for IBM z System zu verschieben ohne dabei eine Ausfallzeit zu haben. \cite{website:ibm}
 \begin{longtable}{|p{5cm}|p{10cm}|}
@@ -101,7 +101,7 @@ Transactional execution use                          & Bietet verbesserte Perfor
 \end{longtable}
 http://www.redbooks.ibm.com/redbooks/pdfs/sg248332.pdf
 
-\subsubsection{Management Tools für KVM on IBM z System}
+\subsection{Management Tools für KVM on IBM z System}
 Dynamic Partition Manager kurz DPM.
 DPM ist ein geführtes Management Interface im HMC (IBM Hardware Management Konsolen), mit welchem die z System Hardware und die virtuelle Infrastruktur mitsamt dem integriertem dynamischen I/O Management  definiert werden kann.\\
 Unattended Installation (Unbeaufsichtigte Installation)
@@ -127,12 +127,12 @@ Viele verschiedene Tools wurden noch hinzugefügt um Probleme zu finden:
    \item Das sosreport Skript sammelt System fehlerbehebungs Informationen
 \end{itemize}
 
-\section{ESXi}
+\chapter{ESXi}
 VMware ESXi (früher bekannt als ESX) ist ein Enterprise-Class, Typ-1 Hypervisor. Entwickelt wird dieser Typ-1 Hypervisor von VMware. Als ein Typ-1 Hypervisor, ist ESXI nicht eine Software Applikation, welche auf einem bestehenden Betriebssystem installiert wird, sondern, es beherbergt in sich schon wesentliche Komponente eines Betriebssystems, wie etwa den Kernel. \\
 
 Nach der Version 4.1 benannte VMware ESX zu ESXi, ESXi ersetzte damals die Service Konsolen welches lediglich ein rudimentäres Betriebssystem war, mit einem besser integrierten Betriebssystem. ESX/ESXi ist die wichtigste Komponente der VMware Software Infrastruktur. \\
 
-\subsection{Funktionsumfang}
+\section{Funktionsumfang}
 Bei ESXi gibt es noch eine Sonderheit. ESXi ist zwar an sich kostenlos. So kann auf jedem Server / Rechner ESXi installiert werden ohne eine Lizenz bezahlen zu müssen. Möchte man jedoch ESXi auch verwalten und Konfigurieren so muss man sich den VMware vSphere hinzukaufen. Dies ist das Management Tool um den ESXi Hypervisor über die Distanz, also über das Lokale LAN zu konfigurieren. Dieses vSphere wird von VMware in 3 Lizenzversionen verkauft, welche über eine unterschiedliche Funktionspalette verfügt. Diese wurde nun in der Folgenden Tabelle dargelegt.
 
 \begin{longtable}{|p{5cm}|p{3cm}|p{3cm}|p{3cm}|}
@@ -194,14 +194,15 @@ Starke Integration mit dem Host OS ist normalerweise der primäre Grund, weshalb
 
 KVM gewinnt klar gegen VMware wenn es zu den Kosten kommt. KVM ist OpenSource, dies bedeutet, dass keine weiteren Kosten für den Endbenutzer anfallen. Es wird oft auf verschiedenen Wegen vertrieben, meist als ein Teil einer open Source Lösung.
 
-VMware charges a license fee to use its products, including ESXi. It’s able to do this because VMware was the first company to release enterprise-class virtualization software and is still the market leader in this segment. Its brand is therefore still relevant to an business’s end users, regardless of what developers may think about it. An ESXi user must also purchase a license to use vSphere, VMware’s suite of tools for cloud computing that uses ESXi. Additional software licenses may be needed, which will further increase the cost of implementing ESXi.
+VMware erhebt licenz gebühren für den gebrauch ihrer Produkte. Sie sind dazu auch im stande, da sie das erste Unternehmen waren, welches Enterprise Softwarelösungen für die Virtualisation veröffentlicht haben. Dies führte zu dem Umstand, dass sie auch heute noch der Marktführer in diesem segment sind. Die Marke VMware ist deshalb immernoch relevant für einen Business end user, auch wenn die Entwickler anders darüber denken. Um den ESXi betreiben zu können muss die Licence für den gebrauch von vSphere gekauft werden. vSphere ist VMware's Funktionspallete um ESXi zu konfigurieren. Es könnte sein, dass zu diesen Licenz kosten noch weitere Licenzen dazugekauft werden müssen, was die Kosten für die Betreibung eines ESXi steigen lässt.
 
-IBM performed some calculations regarding the total cost of ownership (TCO) for KVM and VMware in 2012. These calculations showed the KVM’s TCO was typically 39 percent less than VMware, although the actual TCO will depend on site-specific factors such as the operational setting and workload. This difference in TCO indicates that cloud service providers will probably want to implement KVM on at least one cluster, regardless of the other factors to consider.
-\subsubsection{Complexity}
+IBM hat die Total Cost of Ownership für KVM und VMware im Jahre 2012 ausgerechnet. Die Berechnungen haben aufgezeit, dass KVM durchschnittlich 39\% günstiger waren als VMware. Die Kosten hängen jedoch stark von den Firmen-Specifischen faktoren wie etwa den Operational setting und des Workloads.
 
-A comparison of KVM and VMware also show a clear difference in the size of the code base, which affects a hypervisor’s maintenance costs. KVM was initially released to take advantage of processor extensions that allowed them to virtualize guests without translating binary code. This origin meant that the first stable release of KVM was essentially a lightweight virtualization driver, with little more than 10,000 lines of code (LOC).
+\subsubsection{Komplexität}
 
-VMware is believed to have over 6 million LOC, although this fact can’t be verified since its source code isn’t publicly available. This total doesn’t directly affect performance since VMware uses hardware extensions to virtualize guest. Nevertheless, its original code has never been completely rewritten, resulting in a more complex code base than KVM.
+Ein vergleich auf ebene des Quellcodes von KVM und VMware führte zu einer klaren differenz der länge, welche einen Effekt auf die Wartungskosten eines Hypervisors ausübt. KVM wurde ursprüngliche entwickelt um die Eingebauten Processor funktionen, welche die Virtualisierung ohne übersetzten des Binary Codes erlaubten, zu gebrauchen. Dieser umstand verdankt es KVM, dass der Hypervisor zum Release zeitpunkt eine sehr leichte virtualisierunglösung war mit etwas mehr als 10,000 zeilen code.
+Bei VMware kann die Angaben nur vermutet werden, da der Quellcode im gegensatzt zu KVM nicht öffentlich zugänglich ist. Es wird jedoch vermutet, dass der Codes mehr als 6 Millionen Zeilen aufweist. Diese Imense menge an Code hat vermutlich keinen grösseren effekt auf die Performence, da auch VMware auf die HArdware extensions der Processoren aufbaut, jedoch sorgt es dafür, dass mehr Fehler auftreten können und diese auch länger brauchen um gefunden zu werden.
+
 \subsubsection{Maturity}
 
 KVM and ESXi are both highly mature and stable. KVM has been part of the Linux kernel for over a decade, and ESXi has been publicly available since 2006. However, KVM is more widely deployed since it’s open source and is included in many packages such as Redhat Enterprise Virtualization (RHEV). KVM also supports more features than any other hypervisor.
