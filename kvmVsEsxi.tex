@@ -1,11 +1,13 @@
 \documentclass[14pt]{extreport}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
+\usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{graphicx}
 \usepackage{biblatex}
+\usepackage{amssymb}
+\usepackage{longtable}
 \addbibresource{kvmVsEsxi.bib}
-\usepackage{tabularx}
 
 \author{Dane Wicki}
 \title{KVM on Z vs. ESXi}
@@ -80,14 +82,11 @@ Es gibt zudem für auf KVM aufbauende Komplettlösungen für die Servervirtualis
  
 Für die Verwaltung der Gastsysteme gibt im Wesentlichen viele verschiedene Tools, von einfachen verwaltungssoftware für den Desktop PC wie zum Beispiel Gnome-Boxe
 
-
+\newpage
 \subsection{KVM on IBM z System}
 KVM for IBM z Systems ist eine kostengünstige alternative zu der von der IBM selbst entwickelten Virtualisierungslösung z/VM. KVM for IBM z System besitzt ein einfaches und gewohntes User-Interfaces, welche eine einfache integration der z System platform in die IT infrastruktur ermöglicht.
-KVM for IBM z System ermöglicht zudem das den einzelnen Gastsystemen mehr resourcen zugeteilt wird, als das z System tatsächlich zur verfügung stellt, dieser umstand ermöglicht die optimale auslastung der virtuellen umgebung. Zusätzlich macht es die platformmobilität einfacher und ist sogar in der lage VMs und workloads zwischen verschiedenen instanzen von KVM for IBM z System zu verschieben ohne dabei eine Ausfallzeit zu haben.
-\cite(ibm)
-\begin{table}[]
-\centering
-\begin{tabular}{|p{5cm}|p{10cm}|}
+KVM for IBM z System ermöglicht zudem das den einzelnen Gastsystemen mehr resourcen zugeteilt wird, als das z System tatsächlich zur verfügung stellt, dieser umstand ermöglicht die optimale auslastung der virtuellen umgebung. Zusätzlich macht es die platformmobilität einfacher und ist sogar in der lage VMs und workloads zwischen verschiedenen instanzen von KVM for IBM z System zu verschieben ohne dabei eine Ausfallzeit zu haben. \cite{website:ibm}
+\begin{longtable}{|p{5cm}|p{10cm}|}
 \hline
 \textbf{Feature}                                     & \textbf{Benefit}                                                                                      \\ \hline
 KVM hypervisor                                       & Unterstzt das ausführen mehrere nicht gleicher Linux VMs auf einem einzelnen System.                  \\ \hline
@@ -100,8 +99,7 @@ Thin-provisioned VMs                                 & Die VMDisk benötigt nur 
 Hypervisor performance management                    & Unterstützung von policy-based, goal-oriented management und monitoring der virtuellen CPU resourcen. \\ \hline
 Installation and configuration tools                 & Mitlieferung von tools um KVM for IBM z System zu installieren und Konfigurieren.                     \\ \hline
 Transactional execution use                          & Bietet verbeserte performance für das ausführen von multi-threaded Applikationen.                     \\ \hline
-\end{tabular}
-\end{table}
+\end{longtable}
 http://www.redbooks.ibm.com/redbooks/pdfs/sg248332.pdf
 
 
@@ -120,6 +118,7 @@ Kimchi ist ein OpenSource management tool, welches über ein intuitives Graphisc
     \item Debug reports
     \item Hypervisor Neustart
 \end{itemize}
+\newpage
 Enhanced problem determination support
 Viele verschiedene tools wurden noch hinzugefügt um probleme zu finden:
 \begin{itemize}
@@ -131,12 +130,36 @@ Viele verschiedene tools wurden noch hinzugefügt um probleme zu finden:
 \end{itemize}
 
 \section{ESXi}
-VMWare ESXi (früher bekannt als ESX) ist ein Enterprise-Class, Typ-1 Hypervisor. Entwickelt wird dieser Typ-1 Hypervisor von VMware. Als ein Typ-1 Hypervisor, ist ESXI nicht eine Software Application, welche auf einem bestehenden Betriebssystem installiert wird, sondern, es beherbergt in sich schon wesentliche komponente eines Betriebssystemes, wie etwa den kernel.
+VMWare ESXi (früher bekannt als ESX) ist ein Enterprise-Class, Typ-1 Hypervisor. Entwickelt wird dieser Typ-1 Hypervisor von VMware. Als ein Typ-1 Hypervisor, ist ESXI nicht eine Software Application, welche auf einem bestehenden Betriebssystem installiert wird, sondern, es beherbergt in sich schon wesentliche komponente eines Betriebssystemes, wie etwa den kernel. \\
 
-Nach der verion 4.1 benannte VMWare ESX zu ESXi, ESXi ersetzte damals die Service Console welches lediglich ein rudimentäres Betriebssystem war, mit einem besser integrierten Betriebssystem. ESX/ESXi ist die wichtigste Komponente der VMWare Software Infrastruktur.
+Nach der verion 4.1 benannte VMWare ESX zu ESXi, ESXi ersetzte damals die Service Console welches lediglich ein rudimentäres Betriebssystem war, mit einem besser integrierten Betriebssystem. ESX/ESXi ist die wichtigste Komponente der VMWare Software Infrastruktur. \\
+
 
 \subsection{Funktionsumfang}
-TODO
+Bei ESXi gibt es noch eine sonderheit. ESXi ist zwar an sich kostenlos. So kann auf jedem Server / Rechner ESXi installiert werden ohne eine Lizenz bezahlen zu müssen. Möchte man jedoch ESXi auch verwalten und Konfigurieren so muss man sich den VMWare vSphere hinzukaufen. Dies ist das Managment tool um den ESXi Hypervisor über die distanz, also über das Lokale Lan zu konfigurieren. Dieses vSphere wird von VMWare in 3 Lizenzversionen verkauft, welche über eine unterschiedliche Funktionspalette verfügt. Diese wurde nun in der Folgenden Tabelle dargelegt.
+
+\begin{longtable}{|p{5cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Funktion und Merkmale}                                      & \textbf{Standard}                 & \textbf{Enterprise Plus}          & \textbf{Operations Management Enterprise Plus} \\ \hline
+VMotion (Live-Migration)                                            & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+Storage VMotion (Live-Migration des Storages, z.B. in ein Cluster)  & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+Data Backupsolution                                                 & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+Fault Tolerance (Unterbrechungsfrei bei bis zu x VCPUs)             & 2 VCPUs                           & 4 VCPUs                           & 4 VCPUs    \tabularnewline \hline
+Anti Virus System für alle VM (läuft nicht in den VMs)              & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+VSphere Replication (ermöglicht Replikation von daten aus VM heraus)& \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+VCenter HA                                                          & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+RecoverySolution                                                    & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+Verschlüsselung der VMs                                             &                                   & \checkmark                        & \checkmark \tabularnewline \hline
+Virtuelle Laufwerke                                                 & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+Storage Policy-Based Management                                     & \checkmark                        & \checkmark                        & \checkmark \tabularnewline \hline
+Distributed Resource \& Power Sheduler (Schaltet nicht gebrauchte VMS ab)&                               & \checkmark                        & \checkmark \tabularnewline \hline
+Storage DRS (Speichert daten der VMs so, dass Sie schneller gefunden werden)&                           & \checkmark                        & \checkmark \tabularnewline \hline
+NVIDIA GRID vGPU                                                    &                                   & \checkmark                        & \checkmark \tabularnewline \hline
+Flexible Operations Policies and Operations Groups                  &                                   &                                   & \checkmark \tabularnewline \hline
+Role-based Access Control                                           &                                   &                                   & \checkmark \tabularnewline \hline
+Scale-out Platform                                                  &                                   &                                   & \checkmark \tabularnewline \hline
+\caption{Darstellung eines Kleinen funktionsauszuges von \cite{website:vmwareEsxi}}
+\end{longtable}
 
 \chapter{Vergleich}
 Um dem Vergleich einen fairen touch zu verleiten wurde hier Ausschliesslich KVM und ESXi miteinander verglichen und nicht KVM on IBM z System, da dieses Komplettpacket wohl für zwei total unterschiedliche einsatztgebiete gebraucht werden und dementsprechend kein guter vergleich zustande kommen könnte.

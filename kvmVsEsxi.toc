@@ -18,30 +18,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}Funktionsumfang}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}KVM on IBM z System}{8}
+\contentsline {subsection}{\numberline {2.2.2}KVM on IBM z System}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Managementtools f\IeC {\"u}r KVM on IBM z System}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}ESXi}{11}
+\contentsline {section}{\numberline {2.3}ESXi}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Funktionsumfang}{11}
+\contentsline {subsection}{\numberline {2.3.1}Funktionsumfang}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Vergleich}{12}
+\contentsline {chapter}{\numberline {3}Vergleich}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Performance}{13}
+\contentsline {subsubsection}{Performance}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Integration}{14}
+\contentsline {subsubsection}{Integration}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cost}{14}
+\contentsline {subsubsection}{Cost}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Complexity}{15}
+\contentsline {subsubsection}{Complexity}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Maturity}{16}
+\contentsline {subsubsection}{Maturity}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Scalability}{16}
+\contentsline {subsubsection}{Scalability}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Functionality Support}{16}
+\contentsline {subsubsection}{Functionality Support}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Fazit}{17}
+\contentsline {chapter}{\numberline {4}Fazit}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Anhang}{18}
+\contentsline {chapter}{\numberline {5}Anhang}{21}

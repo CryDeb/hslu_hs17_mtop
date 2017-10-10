@@ -16,5 +16,30 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{website:vmwareEsxi}{url}{}
+      \name{author}{1}{}{%
+        {{hash=7f8b37715b940736bc29a71b2f98126d}{%
+           family={VMWare},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f8b37715b940736bc29a71b2f98126d}
+      \strng{fullhash}{7f8b37715b940736bc29a71b2f98126d}
+      \strng{authornamehash}{7f8b37715b940736bc29a71b2f98126d}
+      \strng{authorfullhash}{7f8b37715b940736bc29a71b2f98126d}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{vSphere und vSphere with Operations Management}
+      \verb{url}
+      \verb https://www.vmware.com/ch/products/vsphere.html
+      \endverb
+      \warn{\item Entry 'website:vmwareEsxi' (kvmVsEsxi.bib): Invalid format '05.10.2017' of date field 'urldate' - ignoring}
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 
