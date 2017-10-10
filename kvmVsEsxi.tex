@@ -167,7 +167,7 @@ Es werden nur die Folgenden Punkte miteinander verglichen:
 	\item	Integration
 	\item	Kosten
 	\item	Komplexität
-	\item	Maturity
+	\item	Reife (Ausgereift?)
 	\item	Skalirbarkeit
 	\item	Funktionssupport
 \end{itemize}
@@ -203,9 +203,10 @@ IBM hat die Total Cost of Ownership für KVM und VMware im Jahre 2012 ausgerechn
 Ein vergleich auf ebene des Quellcodes von KVM und VMware führte zu einer klaren differenz der länge, welche einen Effekt auf die Wartungskosten eines Hypervisors ausübt. KVM wurde ursprüngliche entwickelt um die Eingebauten Processor funktionen, welche die Virtualisierung ohne übersetzten des Binary Codes erlaubten, zu gebrauchen. Dieser umstand verdankt es KVM, dass der Hypervisor zum Release zeitpunkt eine sehr leichte virtualisierunglösung war mit etwas mehr als 10,000 zeilen code.
 Bei VMware kann die Angaben nur vermutet werden, da der Quellcode im gegensatzt zu KVM nicht öffentlich zugänglich ist. Es wird jedoch vermutet, dass der Codes mehr als 6 Millionen Zeilen aufweist. Diese Imense menge an Code hat vermutlich keinen grösseren effekt auf die Performence, da auch VMware auf die HArdware extensions der Processoren aufbaut, jedoch sorgt es dafür, dass mehr Fehler auftreten können und diese auch länger brauchen um gefunden zu werden.
 
-\subsubsection{Maturity}
+\subsubsection{Reife (Ausgereift?)}
 
-KVM and ESXi are both highly mature and stable. KVM has been part of the Linux kernel for over a decade, and ESXi has been publicly available since 2006. However, KVM is more widely deployed since it’s open source and is included in many packages such as Redhat Enterprise Virtualization (RHEV). KVM also supports more features than any other hypervisor.
+KVM sowie ESXi sind beide sehr Ausgereift und stabil. KVM ist nun bereits seit über einem Jahrzehnt in den Linux Kernel integriert und ESXi ist auch schon seit 2006 in gebrauch. Jedoch ist KVM wohl weiter verbreitet über alle felder hinweg (auch Desktop PC), da es eben open Source ist und bereits in Sehr vielen Distributionen integriert ist. Zudem unterstützt KVM mehr features als jeder andere Hypervisor.
+
 \subsubsection{Scalability}
 
 KVM is generally more scalable than VMware, primarily because vSphere has some limitations on the servers it can manage. Furthermore, VMware has added a large number of Storage Area Networks (SANs) to support various vendors. This feature means that VMware has more storage options than KVM, but it also complicates VMware’s storage support when scaling up.
