@@ -26,7 +26,8 @@ ESXi, die 2. Lösung, ist eine Weitere Möglichkeit um zu Virtualisieren. Diese 
 \tableofcontents
 
 \chapter{Einleitung}
-TODO
+In der Heutigen welt nimt die Virtualisierung eine wohl immer Stärkere Position ein. Die stetig steigende Leistung der Hardware ist dabei ein Wesentlicher bestandteil dabei. Zudem bietet die Virtualsiserung eine vereinfachung der Administration, da mehrere Betriebssysteme auf einer Hardware laufen kann und dadurch nur diese eine Hardware gewartet werden muss. In der Welt der Virtualisierung gibt es immer weitere Lösungen und man kann zwischen vielen verschiedenen Anbietern aussuchen. Hier wird auf zwei Lösungen eingegangen und diese in einem Kleinen vergleich gegenübergestellt.
+
 \chapter{Grundlagen}
 \section{Grundlagen der Virtualisierung}
 Virtuell ist laut Duden etwas, was nicht echt, nicht in der Wirklichkeit vorhanden, also nur scheinbar vorhanden ist. Wenn wir nun von einer Virtualisierung sprechen im Bereich der IT hat dies viel mit dieser Definition zu tun. Wenn wir nun eine Betriebssystem Instanz auf einem nicht vorhanden, also virtuellen Rechner installieren, nennen wir das Virtualisierung. Aber was meine ich nun mit dem virtuellen Rechner und wie kann ich darauf etwas laufen lassen wenn er doch nicht existiert?\\
@@ -65,26 +66,25 @@ Ein Typ-1-Hypervisor (Bare-Metal oder auch native genannt) setzt direkt auf der 
 Ein Typ-2-Hypervisor setzt auf einem vollwertigen Betriebssystem, welches auf dem Hostsystem installiert ist, auf und nutzt die Treiber, des Betriebssystems, um auf die Hardwareressourcen des Hostsystems zugreifen zu können. Dementsprechend sind alle Typ-2-Hypervisoren auf einem Hostsystem lauffähig, sofern sich auf diesem das unterstützte Host Betriebssystem installieren lässt.
 \chapter{KVM}
 KVM steht für Kernel Based Virtual Machine. bei KVM handelt es sich um eine Infrastruktur des Linux-Kernels zur Virtualisierung. Die Virtualisierung auf verschiedenen Plattformen unterstützt, unter anderem die folgenden Intel, AMD, ARM, PowerPC und System Z. KVM selbst nimmt keine Emulation vor, es ist also nicht möglich eine Bestimmte Hardware zu emulieren mit KVM selbst. so würde es sich als enorm Schwer erweisen ein vollwertiges Betriebssystem auf dem Hostsystem nur mit Hilfe von KVM zu installieren. Um die Emulation zu ermöglichen hat sich QEMU als de facto Standard etabliert. QEMU steht für Quick Emulator uns stellt für virtualisierte Gastsysteme die notwendigen Geräte wie Festplatten, Netzwerk-, Sound- und Grafikkarten zur Verfügung.\\
-KVM ist desweiteren auch eine Quelloffene Lösung, und ist neben XEN der Weitverbreitete Quelloffene Hypervisor. Trotz einigen aussagen ist KVM jedoch ein Type 2 Hypervisor und nicht wie XEN ein Type 1.
-
+KVM ist desweiteren auch eine Quelloffene Lösung, und ist neben XEN der Weitverbreitete Quelloffene Hypervisor. Trotz einigen aussagen ist KVM jedoch ein Typ 2 Hypervisor und nicht wie XEN ein Typ 1. \cite{website:esxyVergleich}
 \section{Funktionsumfang}
 KVM ist bereits bei der Installation eine sehr schlanke und einfache Umgebung. 
 Es sind im Wesentlichen nur die KVM Kernel Module dem bestehenden System zu installieren sowie Qemu und Management-Tools einzurichten. Der Vorteil liegt hier auch, dass viele schon bestehende Linux-Server nachträglich zu einem Virtualisierungssystem aufgerüstet werden kann ohne damit eine Komplette Neuinstallation tätigen zu müssen.
 Weiter verhält sich jede  Virtuelle CPU (kurz VCPU) im Gastsystem wie ein gewöhnlicher Linux-Process und kann so beispielsweise auch über normale Kommandos wie kill oder top kontrolliert und gesteuert werden. Dasselbe gilt auch für die Gerätelandschaft. Da mit KVM und Qemu die normalen Linux-Treiber genutzt werden können, ist eine Umgewöhnung für einen Linux-Administrator nicht nötig.\\
 
-KVM in Zusammenarbeit mit Qemu unterstützt eine enorme Anzahl an Gast-Betriebssysteme, darunter finden sich fast Sämtliche wichtigen Windows-Varianten sowie Linux, Solaris, BSD, FreeBSD und einige exotischere wie ReactOS.\\
+KVM in Zusammenarbeit mit Qemu unterstützt eine enorme Anzahl an Gast-Betriebssysteme, darunter finden sich fast Sämtliche wichtigen Windows-Varianten sowie Linux, Solaris, BSD, FreeBSD und einige exotischere wie ReactOS. \\
 
 Ein Nachteil der KVM ist jedoch, dass sie nicht auf Graphische Systeme ausgerichtet ist, es ist also die Idee, dass ein Gastsystem, welches auf einer KVM Instanz läuft, nur über ein Terminal bedient wird.\\
 Beim Management zeigt sich, wie stark sich die Marktposition dieses Quelloffenen Open-Source-Hypervisors verbessert hat. Es ist inzwischen eine Fülle von Administrationswerkzeugen verfügbar, zudem wird KVM in vielen Cloud-Plattformen eingebaut.
 Durch die simplen Tools virt-manager sowie virsh ist schon eine Remote-Management möglich. Für fortgeschrittene Funktionen wie Orchestrierung ganzer Pools von Virtuellen Maschinen mit weitergehenden Funktionen wie Failover, High Availability und dergleichen gibt es weitere Lösungen. Hier springen Dritt-Objekte sowie Softwarehersteller in die Bresche, normalerweise auch Open Source. 
 
 Es gibt zudem für auf KVM aufbauende Komplettlösungen für die Servervirtualisierung. allen voran RHEV (Red Hat Virtualization).
-Für die Verwaltung der Gastsysteme geben im Wesentlichen viele verschiedene Tools, von einfachen verwaltungssoftware für den Desktop PC wie zum Beispiel Gnome-Boxe
+Für die Verwaltung der Gastsysteme geben im Wesentlichen viele verschiedene Tools, von einfachen verwaltungssoftware für den Desktop PC wie zum Beispiel Gnome-Boxe \cite{website:esxyVergleich}
 
 \newpage
 \section{KVM on IBM z System}
 KVM for IBM z Systems ist eine kostengünstige Alternative zu der von der IBM selbst entwickelten Virtualisierungslösung z/VM. KVM for IBM z System besitzt ein einfaches und gewohntes User-Interfaces, welche eine einfache Integration der z System Plattform in die IT Infrastruktur ermöglicht.
-KVM for IBM z System ermöglicht zudem das den einzelnen Gastsystemen mehr Ressourcen zugeteilt wird, als das z System tatsächlich zur Verfügung stellt, dieser Umstand ermöglicht die optimale Auslastung der virtuellen Umgebung. Zusätzlich macht es die Plattform Mobilität einfacher und ist sogar in der Lage VMs und workloads zwischen verschiedenen Instanzen von KVM for IBM z System zu verschieben ohne dabei eine Ausfallzeit zu haben. \cite{website:ibm}
+KVM for IBM z System ermöglicht zudem das den einzelnen Gastsystemen mehr Ressourcen zugeteilt wird, als das z System tatsächlich zur Verfügung stellt, dieser Umstand ermöglicht die optimale Auslastung der virtuellen Umgebung. Zusätzlich macht es die Plattform Mobilität einfacher und ist sogar in der Lage VMs und workloads zwischen verschiedenen Instanzen von KVM for IBM z System zu verschieben ohne dabei eine Ausfallzeit zu haben. \cite{website:ibm2}
 \begin{longtable}{|p{5cm}|p{10cm}|}
 \hline
 \textbf{Feature}                                     & \textbf{Benefit}                                                                                      \\ \hline
@@ -98,6 +98,7 @@ Thin-provisioned VMs                                 & Die VMDisk benötigt nur 
 Hypervisor Performance Management                    & Unterstützung von policy-based, goal-oriented Management und Monitoring der virtuellen CPU Ressourcen. \\ \hline
 Installation and Konfiguration Tools                 & Mitliefern von Tools um KVM for IBM z System zu installieren und Konfigurieren.                     \\ \hline
 Transactional execution use                          & Bietet verbesserte Performance für das ausführen von multi-threaded Applikationen.                     \\ \hline
+\caption{Auszug der features für IBM z System \cite{website:vmwareEsxi}}
 \end{longtable}
 http://www.redbooks.ibm.com/redbooks/pdfs/sg248332.pdf
 
@@ -155,7 +156,7 @@ NVIDIA GRID vGPU                                                    &           
 Flexible Operations Policies and Operations Groups                  &                                   &                                   & \checkmark \tabularnewline \hline
 Role-based Access Control                                           &                                   &                                   & \checkmark \tabularnewline \hline
 Scale-out Platform                                                  &                                   &                                   & \checkmark \tabularnewline \hline
-\caption{Darstellung eines Kleinen Funktionsauszuges von \cite{website:vmwareEsxi}}
+\caption{Darstellung eines kleinen Funktionsauszuges von VMware\cite{website:vmwareEsxi}}
 \end{longtable}
 
 \chapter{Vergleich}
@@ -183,12 +184,12 @@ Das beste Beispiel für einen puren Typ-1 Hypervisor ist XEN, jedoch auch ESXi, 
 Die Klassifikation von KVM stellt ein etwas grösseres Problem dar. Der Grund für die Schwierigkeiten ist, dass KVM eigenschafte beider Hypervisor Typen beinhaltet. Es wird als eine Linux Komponente vertrieben. Dies bedeutet, dass ein Linux User KVM von der Command Line oder per GUI starten kann. Das KVM so gestartet werden kann lässt es so aussehen, als sei es eine Applikation, welche auf einem Betriebssystem läuft, obschon KVM im Kernel integriert ist und dadurch auch direkt auf der Maschine Läuft.
 Das Host Betriebssystem stellt KVM ein Start Mechanismus, nach welchem es eine Co-Processing Beziehung mit ihm aufbaut. Diese Co-Processing Beziehung erlaubt es KVM die physische Hardware direkt zu Kontrollieren. KVM macht von den Prozessor Virtualisierung Instruktionen auf der x86 Hardware gebrauch. Dies erlaubt es dem Hypervisor und all seinen Gästen direkt auf der Hardware zu laufen, also Bare-Metal. Die physikalische Hardware für die meisten Resource Translation aus, so das KVM die traditionellen Kriterien für einen Typ 1 Hypervisor erfüllen würde und dennoch wird es als ein Typ 2 Hypervisor eingestuft.
 
-Auch wenn bekanntermassen ein Typ 1 Hypervisor schneller laufen sollte als ein Typ2 so ist dies bei KVM und ESXi nicht der Fall. KVM kann hier mit einer besseren Startzeit punkten und auch einer etwas besseren Performance, was sich jedoch bei einem normalen Workload kaum unterscheiden lässt.
+Auch wenn bekanntermassen ein Typ 1 Hypervisor schneller laufen sollte als ein Typ2 so ist dies bei KVM und ESXi nicht der Fall. KVM kann hier mit einer besseren Startzeit punkten und auch einer etwas besseren Performance, was sich jedoch bei einem normalen Workload kaum unterscheiden lässt. \cite{website:vergleich}
 
 \subsubsection{Integration}
 Die verschiedenen Hypervisoren nutzten auch verschiedene Methoden um mit der physikalischen Hardware des Hosts zu Kommunizieren. KVM benutzt dazu einen Agent, welcher auf dem Host installiert ist um mit der Hardware zu Kommunizieren, ESXi hingegen nutzt VMware Management plane um mit der Hardware zu kommunizieren. VMware's Lösung ermöglicht es ESXi auf anderen VMware Produkte, welche auch die Management plane nutzten, zuzugreifen. Dies erfordert jedoch auch, dass ESXi VMware control stack verwenden muss, was zu einer erhöhten Hardware Requirement führt.
 
-Starke Integration mit dem Host OS ist normalerweise der primäre Grund, weshalb Linux Entwickler KVM bevorzugen. Da KVM kurz nach dessen Release in den Linux Kernel integriert wurde. Zum Vergleich, Xen wurde nicht offiziell in den Kernel integriert bis 2011, also 8 Jahre nach dessen Einführung. Zudem wird es bevorzugt, da viele Linux distributionen KVM als präferierten Hypervisor adaptiert haben.
+Starke Integration mit dem Host OS ist normalerweise der primäre Grund, weshalb Linux Entwickler KVM bevorzugen. Da KVM kurz nach dessen Release in den Linux Kernel integriert wurde. Zum Vergleich, Xen wurde nicht offiziell in den Kernel integriert bis 2011, also 8 Jahre nach dessen Einführung. Zudem wird es bevorzugt, da viele Linux distributionen KVM als präferierten Hypervisor adaptiert haben. \cite{website:vergleich}
 
 \subsubsection{Kosten}
 
@@ -196,24 +197,24 @@ KVM gewinnt klar gegen VMware wenn es zu den Kosten kommt. KVM ist OpenSource, d
 
 VMware erhebt licenz gebühren für den gebrauch ihrer Produkte. Sie sind dazu auch im stande, da sie das erste Unternehmen waren, welches Enterprise Softwarelösungen für die Virtualisation veröffentlicht haben. Dies führte zu dem Umstand, dass sie auch heute noch der Marktführer in diesem segment sind. Die Marke VMware ist deshalb immernoch relevant für einen Business end user, auch wenn die Entwickler anders darüber denken. Um den ESXi betreiben zu können muss die Licence für den gebrauch von vSphere gekauft werden. vSphere ist VMware's Funktionspallete um ESXi zu konfigurieren. Es könnte sein, dass zu diesen Licenz kosten noch weitere Licenzen dazugekauft werden müssen, was die Kosten für die Betreibung eines ESXi steigen lässt.
 
-IBM hat die Total Cost of Ownership für KVM und VMware im Jahre 2012 ausgerechnet. Die Berechnungen haben aufgezeit, dass KVM durchschnittlich 39\% günstiger waren als VMware. Die Kosten hängen jedoch stark von den Firmen-Specifischen faktoren wie etwa den Operational setting und des Workloads.
+IBM hat die Total Cost of Ownership für KVM und VMware im Jahre 2012 ausgerechnet. Die Berechnungen haben aufgezeit, dass KVM durchschnittlich 39\% günstiger waren als VMware. Die Kosten hängen jedoch stark von den Firmen-Specifischen faktoren wie etwa den Operational setting und des Workloads. \cite{website:vergleich}
 
 \subsubsection{Komplexität}
 
 Ein vergleich auf ebene des Quellcodes von KVM und VMware führte zu einer klaren differenz der länge, welche einen Effekt auf die Wartungskosten eines Hypervisors ausübt. KVM wurde ursprüngliche entwickelt um die Eingebauten Processor funktionen, welche die Virtualisierung ohne übersetzten des Binary Codes erlaubten, zu gebrauchen. Dieser umstand verdankt es KVM, dass der Hypervisor zum Release zeitpunkt eine sehr leichte virtualisierunglösung war mit etwas mehr als 10,000 zeilen code.
-Bei VMware kann die Angaben nur vermutet werden, da der Quellcode im gegensatzt zu KVM nicht öffentlich zugänglich ist. Es wird jedoch vermutet, dass der Codes mehr als 6 Millionen Zeilen aufweist. Diese Imense menge an Code hat vermutlich keinen grösseren effekt auf die Performence, da auch VMware auf die HArdware extensions der Processoren aufbaut, jedoch sorgt es dafür, dass mehr Fehler auftreten können und diese auch länger brauchen um gefunden zu werden.
+Bei VMware kann die Angaben nur vermutet werden, da der Quellcode im gegensatzt zu KVM nicht öffentlich zugänglich ist. Es wird jedoch vermutet, dass der Codes mehr als 6 Millionen Zeilen aufweist. Diese Imense menge an Code hat vermutlich keinen grösseren effekt auf die Performence, da auch VMware auf die HArdware extensions der Processoren aufbaut, jedoch sorgt es dafür, dass mehr Fehler auftreten können und diese auch länger brauchen um gefunden zu werden. \cite{website:vergleich}
 
-\subsubsection{Reife (Ausgereift?)}
+\subsubsection{Reife}
 
-KVM sowie ESXi sind beide sehr Ausgereift und stabil. KVM ist nun bereits seit über einem Jahrzehnt in den Linux Kernel integriert und ESXi ist auch schon seit 2006 in gebrauch. Jedoch ist KVM wohl weiter verbreitet über alle felder hinweg (auch Desktop PC), da es eben open Source ist und bereits in Sehr vielen Distributionen integriert ist. Zudem unterstützt KVM mehr features als jeder andere Hypervisor.
+KVM sowie ESXi sind beide sehr Ausgereift und stabil. KVM ist nun bereits seit über einem Jahrzehnt in den Linux Kernel integriert und ESXi ist auch schon seit 2006 in gebrauch. Jedoch ist KVM wohl weiter verbreitet über alle felder hinweg (auch Desktop PC), da es eben open Source ist und bereits in Sehr vielen Distributionen integriert ist. Zudem unterstützt KVM mehr features als jeder andere Hypervisor. \cite{website:vergleich}
 
 \subsubsection{Scalability}
 
-KVM ist im Allgemeinen etwas besser Skalierbar als ESXi. Vorallem weil vSpehre, die verwaltunssoftware von VMware, einige limitationen mitbringt, mit welchem es den Server managenkann. Es gibt jedoch bereiche in denen Klar ESXi die Nase forn hat, einer der punkte liegt in der Storage option. VMware hat eine grosse anzahl an Storage Area Network hinzugefügt um verschiedene Hersteller zu unterschtützen, dies kann jedoch bei einem Scaling up auch ein kleiner Nachteil sein.
+KVM ist im Allgemeinen etwas besser Skalierbar als ESXi. Vorallem weil vSpehre, die verwaltunssoftware von VMware, einige limitationen mitbringt, mit welchem es den Server managenkann. Es gibt jedoch bereiche in denen Klar ESXi die Nase forn hat, einer der punkte liegt in der Storage option. VMware hat eine grosse anzahl an Storage Area Network hinzugefügt um verschiedene Hersteller zu unterschtützen, dies kann jedoch bei einem Scaling up auch ein kleiner Nachteil sein. \cite{website:vergleich}
 
 \subsubsection{Functionality Support}
 
-Hypervisoren unterscheiden sich stark in ihrer Funktionalität. Netzwerk- und Speicherunterstützung sind besonders wichtig und sind wahrscheinlich wichtiger als viele weitere Funktionen ausser vielleicht die Integration in das Betriebssystem. Es sollte keine allzu grosse Überraschung sein, dass die ESXi-Unterstützung für andere VMware-Produkte von keinem anderen Hypervisor erreicht wird. Auf der anderen Seite bietet KVM mehr Möglichkeiten für die Netzwerkunterstützung als VMware.
+Hypervisoren unterscheiden sich stark in ihrer Funktionalität. Netzwerk- und Speicherunterstützung sind besonders wichtig und sind wahrscheinlich wichtiger als viele weitere Funktionen ausser vielleicht die Integration in das Betriebssystem. Es sollte keine allzu grosse Überraschung sein, dass die ESXi-Unterstützung für andere VMware-Produkte von keinem anderen Hypervisor erreicht wird. Auf der anderen Seite bietet KVM mehr Möglichkeiten für die Netzwerkunterstützung als VMware. \cite{website:vergleich}
 
 \chapter{Fazit}
 KVM ist in der Regel die beliebteste Wahl für Benutzer, die sich Sorgen über die Kosten für den Betrieb jeder einzelnen VM machen und weniger an Funktionen auf Unternehmensebene interessiert sind. Diese gilt in erster Linie für Anbieter von Cloud- und Host-Services, die besonders sensibel auf die Kosten und die Dichte ihrer Server reagieren. Weshalb die anbieter von Cloud- und Host-Services wohl eher eine Open-Source Hypervisor wählen, höchstwahrscheinlich KVM.
@@ -222,12 +223,6 @@ Die enge Integration mit dem Host-Betriebssystem ist einer der häufigsten Grün
 
 Es gilt jedoch immer zu beachten, dass für die Entsprechende Umgebung und den gwünschten Funktionsumfang eine eigene Kurze Analyse gemacht werden muss um so siene den Umständen entsprächende Optimale wahl zu treffen.
 
-\chapter{Anhang}
 \printbibliography
-
-https://www.cs.hs-rm.de/~linn/fachsem0910/hirt/KVM.pdf
-https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909,4
-https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909,5
-https://www.rippleweb.com/vmware-vs-kvm/
 \end{document}
 

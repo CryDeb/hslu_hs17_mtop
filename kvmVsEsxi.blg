@@ -1,19 +1,15 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'kvmVsEsxi.blg'
-[43] biber-darwin:303> INFO - === Tue Oct 10, 2017, 08:46:56
-[64] Biber.pm:359> INFO - Reading 'kvmVsEsxi.bcf'
-[156] Biber.pm:835> INFO - Found 2 citekeys in bib section 0
-[169] Biber.pm:3670> INFO - Processing section 0
-[181] Biber.pm:3840> INFO - Looking for bibtex format file 'kvmVsEsxi.bib' for section 0
-[184] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[188] bibtex.pm:1292> INFO - Found BibTeX data source 'kvmVsEsxi.bib'
-[190] Utils.pm:164> WARN - Name "Bill White, Marian Gasparovic, Franco Pinto, Richard Young" has too many commas: skipping name
-[195] Utils.pm:164> WARN - Entry 'website:ibm' (kvmVsEsxi.bib): Invalid format '06.10.2017' of date field 'urldate' - ignoring
-[198] Utils.pm:164> WARN - Entry 'website:vmwareEsxi' (kvmVsEsxi.bib): Invalid format '05.10.2017' of date field 'urldate' - ignoring
-[205] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[37] biber-darwin:303> INFO - === Tue Oct 10, 2017, 21:56:07
+[59] Biber.pm:359> INFO - Reading 'kvmVsEsxi.bcf'
+[150] Biber.pm:835> INFO - Found 4 citekeys in bib section 0
+[162] Biber.pm:3670> INFO - Processing section 0
+[175] Biber.pm:3840> INFO - Looking for bibtex format file 'kvmVsEsxi.bib' for section 0
+[178] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[183] bibtex.pm:1292> INFO - Found BibTeX data source 'kvmVsEsxi.bib'
 [205] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[206] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
-[206] Biber.pm:3505> INFO - No sort tailoring available for locale 'de-DE'
-[207] bbl.pm:608> INFO - Writing 'kvmVsEsxi.bbl' with encoding 'UTF-8'
-[208] bbl.pm:712> INFO - Output to kvmVsEsxi.bbl
-[208] Biber.pm:109> INFO - WARNINGS: 3
+[205] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[205] Biber.pm:3499> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
+[205] Biber.pm:3505> INFO - No sort tailoring available for locale 'de-DE'
+[211] bbl.pm:608> INFO - Writing 'kvmVsEsxi.bbl' with encoding 'UTF-8'
+[211] bbl.pm:712> INFO - Output to kvmVsEsxi.bbl

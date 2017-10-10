@@ -19,6 +19,35 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{website:esxyVergleich}{url}{}
+      \name{author}{1}{}{%
+        {{hash=4a252c04cfbb2c3fbc5370a95627c53b}{%
+           family={Radonic},
+           familyi={R\bibinitperiod},
+           given={Von\bibnamedelima Andrej},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a252c04cfbb2c3fbc5370a95627c53b}
+      \strng{fullhash}{4a252c04cfbb2c3fbc5370a95627c53b}
+      \strng{authornamehash}{4a252c04cfbb2c3fbc5370a95627c53b}
+      \strng{authorfullhash}{4a252c04cfbb2c3fbc5370a95627c53b}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{9}
+      \field{title}{Kostenlose Virtualisierungssoftware im Vergleich}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.tecchannel.de/a/kostenlose-virtualisierungssoftware-im-vergleich,2051909
+      \endverb
+    \endentry
     \entry{website:vmwareEsxi}{url}{}
       \name{author}{1}{}{%
         {{hash=7f8b37715b940736bc29a71b2f98126d}{%
@@ -34,10 +63,50 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{vSphere und vSphere with Operations Management}
+      \field{urlday}{5}
+      \field{urlmonth}{10}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
       \verb{url}
       \verb https://www.vmware.com/ch/products/vsphere.html
       \endverb
-      \warn{\item Entry 'website:vmwareEsxi' (kvmVsEsxi.bib): Invalid format '05.10.2017' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{website:vergleich}{url}{}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{VMware vs KVM}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{url}
+      \verb https://www.rippleweb.com/vmware-vs-kvm/
+      \endverb
+    \endentry
+    \entry{website:ibm2}{url}{}
+      \name{author}{1}{}{%
+        {{hash=f0e882efbdd58f9385f2a63159312223}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Bill\bibnamedelimb White;\bibnamedelimb Marian\bibnamedelimb Gasparovic;\bibnamedelimb Franco\bibnamedelimb Pinto;\bibnamedelima Richard},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0e882efbdd58f9385f2a63159312223}
+      \strng{fullhash}{f0e882efbdd58f9385f2a63159312223}
+      \strng{authornamehash}{f0e882efbdd58f9385f2a63159312223}
+      \strng{authorfullhash}{f0e882efbdd58f9385f2a63159312223}
+      \field{sortinit}{Y}
+      \field{sortinithash}{f86c10978eb0c0879609ce6a4f43da7b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Red books Front cover Getting Started with KVM for IBM z Systems}
+      \field{urlday}{5}
+      \field{urlmonth}{10}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.redbooks.ibm.com/redbooks/pdfs/sg248332.pdf
+      \endverb
     \endentry
   \endsortlist
 \endrefsection

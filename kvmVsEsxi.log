@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.4)  10 OCT 2017 08:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.4)  10 OCT 2017 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**kvmVsEsxi
+**kvmVsEsxi.tex
 (./kvmVsEsxi.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
@@ -749,18 +749,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'kvmVsEsxi.bbl' found.
 
-(./kvmVsEsxi.bbl
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'website:vmwareEsxi':
-(biblatex)                - Entry 'website:vmwareEsxi' (kvmVsEsxi.bib): Invalid
- format '05.10.2017' of date field 'urldate' - ignoring.
-
-)
+(./kvmVsEsxi.bbl)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 LaTeX Font Info:    Try loading font information for U+msa on input line 16.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 16.
@@ -783,22 +777,22 @@ Kapitel 1.
 ]
 Kapitel 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
+Underfull \hbox (badness 10000) in paragraph at lines 33--43
 
  []
 
@@ -808,55 +802,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--42
 File: png/VMMType1.png Graphic file (type png)
 
 <use png/VMMType1.png>
-Package pdftex.def Info: png/VMMType1.png used on input line 49.
+Package pdftex.def Info: png/VMMType1.png used on input line 50.
 (pdftex.def)             Requested size: 279.49738pt x 143.68945pt.
 
-Overfull \hbox (14.43037pt too wide) in paragraph at lines 54--55
+Overfull \hbox (14.43037pt too wide) in paragraph at lines 55--56
 []\OT1/cmr/m/n/14.4 Ein Typ-1-Hypervisor
  []
 
 
-Overfull \hbox (14.16367pt too wide) in paragraph at lines 54--55
-\OT1/cmr/m/n/14.4 (bare-matel oder auch
+Overfull \hbox (17.48532pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/14.4 (Bare-Metal oder auch
  []
 
 
-Overfull \hbox (8.36708pt too wide) in paragraph at lines 54--55
+Overfull \hbox (8.36708pt too wide) in paragraph at lines 55--56
 \OT1/cmr/m/n/14.4 na-ti-ve ge-nannt) setzt
  []
 
 
-Overfull \hbox (1.23387pt too wide) in paragraph at lines 54--55
+Overfull \hbox (1.23387pt too wide) in paragraph at lines 55--56
 \OT1/cmr/m/n/14.4 di-rekt auf der Hard-
  []
 
 
-Overfull \hbox (8.56042pt too wide) in paragraph at lines 54--55
+Overfull \hbox (8.56042pt too wide) in paragraph at lines 55--56
 \OT1/cmr/m/n/14.4 wa-re auf. Es ben[]otigt
  []
 
 
-Overfull \hbox (5.97546pt too wide) in paragraph at lines 54--55
+Overfull \hbox (5.97546pt too wide) in paragraph at lines 55--56
 \OT1/cmr/m/n/14.4 kein Be-triebs-sy-stem,
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 54--55
+Underfull \hbox (badness 2158) in paragraph at lines 55--56
 \OT1/cmr/m/n/14.4 dass die Hard-wa-
  []
 
 
-Overfull \hbox (18.93698pt too wide) in paragraph at lines 54--55
-\OT1/cmr/m/n/14.4 vom Typ-1-Hypervisor
+Underfull \hbox (badness 4366) in paragraph at lines 55--56
+\OT1/cmr/m/n/14.4 re des Host Sy-
  []
 
 
-Overfull \hbox (14.63365pt too wide) in paragraph at lines 54--55
-\OT1/cmr/m/n/14.4 de Trei-ber un-terst[]utzt
+Underfull \hbox (badness 6978) in paragraph at lines 55--56
+\OT1/cmr/m/n/14.4 stems vom Typ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
@@ -864,100 +858,94 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 File: png/VMMType2.png Graphic file (type png)
 
 <use png/VMMType2.png>
-Package pdftex.def Info: png/VMMType2.png used on input line 60.
+Package pdftex.def Info: png/VMMType2.png used on input line 61.
 (pdftex.def)             Requested size: 258.00262pt x 165.63203pt.
 
-Overfull \hbox (27.32985pt too wide) in paragraph at lines 65--66
+Overfull \hbox (27.32985pt too wide) in paragraph at lines 66--67
 []\OT1/cmr/m/n/14.4 Ein Typ-2-Hypervisor
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 65--66
+Underfull \hbox (badness 1838) in paragraph at lines 66--67
 \OT1/cmr/m/n/14.4 setzt auf ei-nem
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 65--66
+Underfull \hbox (badness 2042) in paragraph at lines 66--67
 \OT1/cmr/m/n/14.4 voll-wer-ti-gen Be-
  []
 
 
-Overfull \hbox (2.2318pt too wide) in paragraph at lines 65--66
+Overfull \hbox (2.2318pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/14.4 triebs-sy-stem, wel-
  []
 
 
-Overfull \hbox (7.24013pt too wide) in paragraph at lines 65--66
+Overfull \hbox (7.24013pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/14.4 ches auf dem Host-
  []
 
 
-Underfull \hbox (badness 1097) in paragraph at lines 65--66
+Underfull \hbox (badness 1097) in paragraph at lines 66--67
 \OT1/cmr/m/n/14.4 die Trei-ber, des
  []
 
 
-Overfull \hbox (2.50348pt too wide) in paragraph at lines 65--66
-\OT1/cmr/m/n/14.4 Be-triebs-sy-ste-mes,
+Overfull \hbox (18.9533pt too wide) in paragraph at lines 66--67
+\OT1/cmr/m/n/14.4 Be-triebs-sy-stems, um
  []
 
 
-Overfull \hbox (3.32846pt too wide) in paragraph at lines 65--66
-\OT1/cmr/m/n/14.4 wa-re-re-sour-cen des
+Underfull \hbox (badness 1997) in paragraph at lines 66--67
+\OT1/cmr/m/n/14.4 rer-es-sour-cen des
  []
 
 
-Overfull \hbox (17.66327pt too wide) in paragraph at lines 65--66
-\OT1/cmr/m/n/14.4 zu-grei-fen zu k[]onnen.
+Underfull \hbox (badness 1931) in paragraph at lines 66--67
+\OT1/cmr/m/n/14.4 Host-sy-stems zu-
  []
 
 
-Overfull \hbox (2.66016pt too wide) in paragraph at lines 65--66
+Overfull \hbox (3.56345pt too wide) in paragraph at lines 66--67
+\OT1/cmr/m/n/14.4 grei-fen zu k[]onnen.
+ []
+
+
+Overfull \hbox (2.66016pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/14.4 Dement-spre-chend
  []
 
 [6 <./png/VMMType2.png>]
-Overfull \hbox (21.40599pt too wide) in paragraph at lines 71--74
-\OT1/cmr/m/n/14.4 trol-liert und ge-steu-ert wer-den. Das sel-be gilt auch f[]u
-r die Ger[]atelandschaft.
- []
-
+Kapitel 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
 
+[7
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-[7] [8]
-
-LaTeX Warning: Citation 'website:ibm' on page 9 undefined on input line 88.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 []|\OT1/cmr/m/n/14.4 Memory and CPU
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 101--101
+Underfull \hbox (badness 1571) in paragraph at lines 100--100
 []|\OT1/cmr/m/n/14.4 Transactional exe-cu-ti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]|\OT1/cmr/m/n/14.4 Bietet ver-be-ser-te per-for-man-ce f[]ur das
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\OT1/cmr/m/n/14.4 Bietet ver-bes-ser-te Per-for-man-ce f[]ur das
  []
 
 
-Underfull \hbox (badness 6461) in paragraph at lines 101--101
-\OT1/cmr/m/n/14.4 ausf[]uhren von multi-threaded Ap-pli-ka-tio-
- []
-
-
-Overfull \hbox (20.79134pt too wide) in alignment at lines 89--102
+Overfull \hbox (20.79134pt too wide) in alignment at lines 88--102
  [] [] 
  []
 
@@ -965,208 +953,224 @@ Overfull \hbox (20.79134pt too wide) in alignment at lines 89--102
 Underfull \vbox (badness 10000) detected at line 102
  []
 
-[9]
-Overfull \hbox (1.038pt too wide) in paragraph at lines 107--111
-\OT1/cmr/m/n/14.4 Unattended in-stal-la-ti-on (Un-be-auf-sich-tig-te In-stal-la
+[10]
+Overfull \hbox (2.20801pt too wide) in paragraph at lines 106--110
+\OT1/cmr/m/n/14.4 Unattended In-stal-la-ti-on (Un-be-auf-sich-tig-te In-stal-la
 -ti-on) Unat-ten-ded In-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
- [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+ [11] [12]
+Overfull \hbox (1.55966pt too wide) in paragraph at lines 121--123
+[]\OT1/cmr/m/n/14.4 Enhanced Pro-blem De-ter-mi-na-ti-on Sup-port Vie-le ver-sc
+hie-de-ne Tools
+ []
+
+[13]
+Kapitel 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Overfull \hbox (23.95775pt too wide) in paragraph at lines 134--135
+\OT1/cmr/m/n/14.4 triebs-sy-stem war, mit ei-nem bes-ser in-te-grier-ten Be-tri
+ebs-sy-stem. ESX/ESXi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
 []|\OT1/cmr/bx/n/14.4 Enterprise
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
 []|\OT1/cmr/bx/n/14.4 Operations
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
 \OT1/cmr/bx/n/14.4 Ma-na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
 \OT1/cmr/bx/n/14.4 ge-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
 \OT1/cmr/bx/n/14.4 En-ter-pri-se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
 []|\OT1/cmr/m/n/14.4 VMotion (Live-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []|\OT1/cmr/m/n/14.4 Storage VMo-ti-on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
 \OT1/cmr/m/n/14.4 (Live-Migration des
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 145--145
+Underfull \hbox (badness 1838) in paragraph at lines 143--143
 \OT1/cmr/m/n/14.4 Sto-ra-ges, z.B. in ein
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 147--147
+Underfull \hbox (badness 2027) in paragraph at lines 145--145
 []|\OT1/cmr/m/n/14.4 Fault To-le-ran-ce (Un-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
 []|\OT1/cmr/m/n/14.4 VSphere Re-p-li-ca-ti-on
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 149--149
+Underfull \hbox (badness 3557) in paragraph at lines 147--147
 \OT1/cmr/m/n/14.4 (erm[]oglicht Re-pli-ka-ti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--152
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
 []|\OT1/cmr/m/n/14.4 Verschl[]usselung der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
 []|\OT1/cmr/m/n/14.4 Storage Policy-Based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 []|\OT1/cmr/m/n/14.4 Distributed Re-sour-ce
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 \OT1/cmr/m/n/14.4 & Power She-du-ler
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
 \OT1/cmr/m/n/14.4 (Schal-tet nicht ge-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []|\OT1/cmr/m/n/14.4 Storage DRS (Spei-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--158
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []|\OT1/cmr/m/n/14.4 Flexible Ope-ra-ti-ons
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 158--158
+Underfull \hbox (badness 1642) in paragraph at lines 156--156
 \OT1/cmr/m/n/14.4 Po-li-cies and Ope-ra-ti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
 []|\OT1/cmr/m/n/14.4 Role-based Ac-cess
  []
 
 
-Overfull \hbox (16.33856pt too wide) in alignment at lines 141--162
+Overfull \hbox (16.33856pt too wide) in alignment at lines 139--160
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 162
+Underfull \vbox (badness 10000) detected at line 160
  []
 
-[13] [14]
-Kapitel 3.
-[15
-
-] [16] [17] [18] [19]
-Kapitel 4.
-[20
-
-]
+[15] [16]
 Kapitel 5.
-[21
+[17
+
+] [18] [19]
+Overfull \hbox (2.80302pt too wide) in paragraph at lines 200--201
+\OT1/cmr/m/n/14.4 Jah-re 2012 aus-ge-rech-net. Die Be-rech-nun-gen ha-ben auf-g
+e-zeit, dass KVM
+ []
+
+[20]
+Overfull \hbox (6.80788pt too wide) in paragraph at lines 217--218
+\OT1/cmr/m/n/14.4 Hypervisoren un-ter-schei-den sich stark in ih-rer Funk-tio-n
+a-lit[]at. Netzwerk-
+ []
+
+
+Overfull \hbox (2.86456pt too wide) in paragraph at lines 217--218
+\OT1/cmr/m/n/14.4 und Spei-cher-un-terst[]utzung sind be-son-ders wich-tig und 
+sind wahr-schein-
+ []
+
+[21] [22]
+Kapitel 6.
+[23
 
 ]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 224.
+(biblatex)                Using fallback driver on input line 226.
 
 
-Overfull \hbox (2.28432pt too wide) in paragraph at lines 225--225
+Package biblatex Warning: No driver for entry type 'url'.
+(biblatex)                Using fallback driver on input line 226.
+
+
+Overfull \hbox (2.28432pt too wide) in paragraph at lines 227--227
 []\OT1/cmr/m/n/14.4 VMWare. \OT1/cmr/m/it/14.4 vS-phe-re und vS-phe-re with Ope
 -ra-ti-ons Ma-na-ge-ment\OT1/cmr/m/n/14.4 . \OT1/cmr/m/sc/14.4 url\OT1/cmr/m/n/
 14.4 :
  []
 
 
-Overfull \hbox (215.60027pt too wide) in paragraph at lines 227--231
-[]\OT1/cmr/m/n/14.4 https://www.cs.hs-rm.de/ linn/fachsem0910/hirt/KVM.pdf http
-s://www.tecchannel.de/a/kostenlose-
- []
+Package biblatex Warning: No driver for entry type 'url'.
+(biblatex)                Using fallback driver on input line 226.
 
 
-Overfull \hbox (116.05472pt too wide) in paragraph at lines 227--231
-\OT1/cmr/m/n/14.4 virtualisierungssoftware-im-vergleich,2051909,4 https://www.t
-ecchannel.de/a/kostenlose-
- []
+Package biblatex Warning: No driver for entry type 'url'.
+(biblatex)                Using fallback driver on input line 226.
 
-
-Overfull \hbox (92.79004pt too wide) in paragraph at lines 227--231
-\OT1/cmr/m/n/14.4 virtualisierungssoftware-im-vergleich,2051909,5 https://www.r
-ippleweb.com/vmware-
- []
-
-[22
+[24
 
 ] (./kvmVsEsxi.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                kvmVsEsxi
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'kvmVsEsxi.run.xml'.
 \openout1 = `kvmVsEsxi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9228 strings out of 492995
- 155436 string characters out of 6132704
- 609723 words of memory out of 5000000
- 12664 multiletter control sequences out of 15000+600000
+ 9240 strings out of 492995
+ 155765 string characters out of 6132704
+ 609012 words of memory out of 5000000
+ 12676 multiletter control sequences out of 15000+600000
  12878 words of font info for 49 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 35i,7n,45p,814b,1537s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,45p,818b,1537s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
@@ -1175,10 +1179,10 @@ sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on kvmVsEsxi.pdf (24 pages, 131449 bytes).
+Output written on kvmVsEsxi.pdf (26 pages, 141710 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 125 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

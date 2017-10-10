@@ -14,34 +14,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Type 2}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}KVM}{6}
+\contentsline {chapter}{\numberline {3}KVM}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Funktionsumfang}{7}
+\contentsline {section}{\numberline {3.1}Funktionsumfang}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}KVM on IBM z System}{9}
+\contentsline {section}{\numberline {3.2}KVM on IBM z System}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Managementtools f\IeC {\"u}r KVM on IBM z System}{10}
+\contentsline {subsection}{\numberline {3.2.1}Management Tools f\IeC {\"u}r KVM on IBM z System}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}ESXi}{12}
+\contentsline {chapter}{\numberline {4}ESXi}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Funktionsumfang}{13}
+\contentsline {section}{\numberline {4.1}Funktionsumfang}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Vergleich}{15}
+\contentsline {chapter}{\numberline {5}Vergleich}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Performance}{16}
+\contentsline {subsubsection}{Performance}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Integration}{17}
+\contentsline {subsubsection}{Integration}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cost}{17}
+\contentsline {subsubsection}{Kosten}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Complexity}{18}
+\contentsline {subsubsection}{Komplexit\IeC {\"a}t}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Maturity}{19}
+\contentsline {subsubsection}{Reife}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Scalability}{19}
+\contentsline {subsubsection}{Scalability}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Functionality Support}{19}
+\contentsline {subsubsection}{Functionality Support}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Fazit}{20}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Anhang}{21}
+\contentsline {chapter}{\numberline {6}Fazit}{23}
